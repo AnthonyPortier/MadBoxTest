@@ -9,7 +9,6 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
-console.log(process.env)
 if (process.env){
   sequelize = new Sequelize(process.env.CONNECTION_DB, process.env.DB_USER, process.env.PASSWORD, config);
 }
