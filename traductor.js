@@ -2,7 +2,7 @@
 
 const http = require('http');
 
-const traductor = (text, res) => {
+const traductor = (text, res,level) => {
 
 
 
@@ -49,7 +49,8 @@ const traductor = (text, res) => {
     Promise.resolve(promise).then(englishWord => {
         const value = {
             french: text,
-            english: englishWord
+            english: englishWord,
+            level:level
         }
         res.send(value)
     })

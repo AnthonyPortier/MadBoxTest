@@ -25,14 +25,8 @@ words.post('/dataWord', async(req, res) => {
 words.get('/oneWord', async(req, res) => {
 
     const theFrenchWord = await models.Word.findOne({where: {id: Math.floor(Math.random() *7972)}})
-    traductor(theFrenchWord.word,res)
+    traductor(theFrenchWord.word,res,theFrenchWord.level)
 
 })
-
-// app.post('/mytest', (req, res) => {
-//             //     models.Words.findAll({where:{level:req.body.level}}).then(x =>{
-//             //         translator(x[0].word, res)
-//             //     })
-//             // })
 
 module.exports = words
