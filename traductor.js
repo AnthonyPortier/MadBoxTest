@@ -46,10 +46,10 @@ const traductor = (text, res) => {
             });
         })
     })
-    Promise.resolve(promise).then(x => {
+    Promise.resolve(promise).then(englishWord => {
         const value = {
             french: text,
-            english: x
+            english: englishWord
         }
         res.send(value)
     })

@@ -12,9 +12,9 @@ app.use(bodyParser.json())
 
 const port = process.env.PORT
 
-app.use('/',routes)
+app.use('/racine',routes)
 
 models
     .sequelize
-    .sync({force:true})
+    .sync()
     .then(() => app.listen(port, console.log('Server is Running')))
