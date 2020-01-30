@@ -1,5 +1,6 @@
 ## Installation 
-
+-ce projet à besoin de variables d'environnement, un template de ces variables est dispo à la source du projet (.env.example), c'est le modèle à utiliser pour créer un fichier appelé .env au même niveau
+ 
 -télécharger le repository
 
 -ouvrez le dossier dans votre IDE 
