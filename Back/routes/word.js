@@ -1,7 +1,7 @@
 const express = require('express')
 const words = express.Router()
 const models = require('../models')
-const verbes = require('../verbes')
+const verbs = require('../verbs')
 const traductor = require('../traductor')
 
 
@@ -17,7 +17,7 @@ words.post('/dataWord', async (req, res) => {
         res.send('database already exist')
     } else {
 
-        Promise.resolve(verbes).then(allData => {
+        Promise.resolve(verbs).then(allData => {
             models
                 .Word
                 .bulkCreate(allData)
@@ -40,7 +40,7 @@ words.get('/oneWord', async (req, res) => {
 })
 
 
-const entierAleatoire = (min, max) => {
+const randomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -49,7 +49,7 @@ words.get('/more/:number', async (req, res) => {
         .Word
         .findAll({
             where: {
-                level: entierAleatoire(parseInt(req.params.number), 10)
+                level: randomInt(parseInt(req.params.number), 10)
             }
         })
         .then(more => {
@@ -64,7 +64,7 @@ words.get('/less/:number', (req, res) => {
         .Word
         .findAll({
             where: {
-                level: entierAleatoire(0, parseInt(req.params.number))
+                level: randomInt(0, parseInt(req.params.number))
             }
         })
         .then(more => {

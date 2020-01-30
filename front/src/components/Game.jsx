@@ -53,7 +53,7 @@ const Game = (props) => {
         if (point === 19) {
             props.history.push(`/youwin`)
         } else if (point === 1) {
-            props.history.push(`/youloose`)
+            props.history.push(`/youlose`)
         }
     }
 
@@ -81,7 +81,7 @@ const Game = (props) => {
             <p>{point} Points</p>
             <p>difficulté {word.level}/10</p>
 
-            <button className='boutonGame' onClick={container}>essayer</button>
+            <button className='gameButton' onClick={container}>essayer</button>
         </div>
 
     )

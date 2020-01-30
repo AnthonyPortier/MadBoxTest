@@ -1,32 +1,37 @@
 .container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin-top:300px;
 }
 
-.boutonAccueil, .boutonGame, .reStart{
-    border:none;
-    padding:6px 3px 6px 3px;
-    border-radius:2px;
-    box-shadow:3px 3px 12px #999;
-    background:#fff;
-    font:bold 13px Arial;
-    color:#555;
+.homePageButton,
+.gameButton,
+.reStart {
+    border: none;
+    padding: 6px 3px 6px 3px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 12px #999;
+    background: #fff;
+    font: bold 13px Arial;
+    color: #555;
     text-decoration: none;
 }
 
-.inputGame{
-    text-align:center
+.inputGame {
+    text-align: center
 }
 
-p{
+p {
     font: small-caps bold 24px/1 sans-serif;
 }
 
-label, .titleWin, .titleLoose{
+label,
+.titleWin,
+.titleLose {
     font: small-caps bold 40px/1 sans-serif;
     margin-bottom: 25px;
 

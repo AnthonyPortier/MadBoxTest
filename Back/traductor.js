@@ -2,7 +2,7 @@
 
 const http = require('http');
 
-const traductor = (text, res,level) => {
+const traductor = (text, res, level) => {
 
 
 
@@ -50,7 +50,7 @@ const traductor = (text, res,level) => {
         const value = {
             french: text,
             english: englishWord,
-            level:level
+            level: level
         }
         res.send(value)
     })

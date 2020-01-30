@@ -6,14 +6,14 @@ import '../cssAppli.css';
 
 
 
-const Loose = () => {
+const Lose = () => {
 
     return (
         <div className='container'>
-            <h1 className='titleLoose'>VOUS AVEZ PERDU !!</h1>
+            <h1 className='titleLose'>VOUS AVEZ PERDU !!</h1>
             <Link className='reStart' to='/game'>Rejouer</Link>
         </div>
     )
 }
 
-export default Loose;
+export default Lose;

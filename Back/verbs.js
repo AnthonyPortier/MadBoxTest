@@ -1,4 +1,4 @@
-let verbes = {
+let verbs = {
     0: "abaisser",
     1: "abandonner",
     2: "abasourdir",
@@ -504,9 +504,9 @@ let verbes = {
 
 
 const promise = new Promise(resolve => {
-    resolve(Object.values(verbes).map(x => {
+    resolve(Object.values(verbs).map(frenchWord => {
         return {
-            word: x,
+            word: frenchWord,
             level: Math.floor(Math.random() * 11)
         }
     }))
