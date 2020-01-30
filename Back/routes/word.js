@@ -5,7 +5,7 @@ const verbs = require('../verbs')
 const traductor = require('../traductor')
 
 
-
+// post de la data au moment du click sur le bouton 'jouer' 
 words.post('/dataWord', async (req, res) => {
 
     const dataExist = await models.Word.findOne({
@@ -27,7 +27,7 @@ words.post('/dataWord', async (req, res) => {
 })
 
 
-
+// get de la data sur un mot francais anglais et le lever
 words.get('/oneWord', async (req, res) => {
 
     const theFrenchWord = await models.Word.findOne({
@@ -44,6 +44,7 @@ const randomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// get de la data sur un mot francais anglais et level si level supérieur au level du mot précédent
 words.get('/more/:number', async (req, res) => {
     models
         .Word
@@ -59,6 +60,7 @@ words.get('/more/:number', async (req, res) => {
         })
 })
 
+// get de la data sur un mot francais anglais et level si level inferieur au level du mot précédent
 words.get('/less/:number', (req, res) => {
     models
         .Word

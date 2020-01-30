@@ -5,10 +5,16 @@ import '../cssAppli.css';
 
 const Game = (props) => {
 
-
+    // hooks qui get la data
     const [word, setWord] = useState([])
+
+    // hooks qui permet de vider l'input après utilisation
     const [inputTest, setInputTest] = useState('')
+
+    // hooks des points initialisés à 10
     const [point, setPoint] = useState(10)
+
+    // hooks qui permet de trouver une boolean ou 0 pour définir le get à utiliser
     const [boolGet, setBoolGet] = useState(0)
 
 
@@ -17,6 +23,8 @@ const Game = (props) => {
         fetchData()
     }, [point])
 
+
+    // get de la data avec trois possibilités : get du debut, get un objet avec level supérieur et get avec un level inférieur
     const fetchData = async () => {
         if (boolGet === 0) {
             await axios.get('http://localhost:5000/racine/index/oneWord')
@@ -33,10 +41,13 @@ const Game = (props) => {
         }
     }
 
+    // 3 constantes qui permettent de vérifier si le get de la data est undifined
     const lengthWord = word.english === undefined ? '' : word.english.length
     const splitWord = word.english === undefined ? '' : word.english.split('')
     const firstLetter = splitWord[0] === undefined ? '' : splitWord[0]
 
+
+    // const qui permet d'ajouter ou diminuer points, de vider l'input et de definir un boolean qui conditionnera le get de la data
     const algoPoint = () => {
         if (inputTest === word.english) {
             setPoint(point + 1)
@@ -49,6 +60,8 @@ const Game = (props) => {
             setBoolGet(false)
         }
     }
+
+    // const redirection sur une autre page win ou lose en fonction du nombre de point
     const redirection = () => {
         if (point === 19) {
             props.history.push(`/youwin`)

@@ -2,9 +2,8 @@
 
 const http = require('http');
 
+// fonction fournie par l'api de traduction avec ajout de parametre level
 const traductor = (text, res, level) => {
-
-
 
     // When you have your own Client ID and secret, put down their values here:
     const clientId = process.env.CLIENTID;

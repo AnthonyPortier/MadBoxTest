@@ -1,3 +1,4 @@
+// Les 500 premiers mots de la liste fournie 
 let verbs = {
     0: "abaisser",
     1: "abandonner",
@@ -502,7 +503,7 @@ let verbs = {
     500: "aviver"
 }
 
-
+// push des mots avec un level
 const promise = new Promise(resolve => {
     resolve(Object.values(verbs).map(frenchWord => {
         return {

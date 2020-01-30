@@ -9,6 +9,8 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
+
+//condition qui vient chercher si il y a un . env et qui déclenche la la création de la bdd
 if (process.env) {
   sequelize = new Sequelize(process.env.CONNECTION_DB, process.env.DB_USER, process.env.PASSWORD, config);
 }
