@@ -1,6 +1,8 @@
 ## Installation 
 -ce projet à besoin de variables d'environnement, un template de ces variables est dispo à la source du projet (.env.example), c'est le modèle à utiliser pour créer un fichier appelé .env au même niveau
- 
+
+-creer une database sur mysql et mettre son nom dans le .env, accompagné des identifiants de co à l'api tierce
+
 -télécharger le repository
 
 -ouvrez le dossier dans votre IDE 
